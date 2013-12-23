@@ -168,6 +168,12 @@
     <Content Include="SliderFiles\images\wpfslider-17s.jpg" />
     <Content Include="SliderFiles\images\wpfslider-18.jpg" />
     <Content Include="SliderFiles\images\wpfslider-18s.jpg" />
+    <Content Include="SliderFiles\images\wpfslider-19.png" />
+    <Content Include="SliderFiles\images\wpfslider-19s.png" />
+    <Content Include="SliderFiles\images\wpfslider-20.png" />
+    <Content Include="SliderFiles\images\wpfslider-20s.png" />
+    <Content Include="SliderFiles\images\wpfslider-21.png" />
+    <Content Include="SliderFiles\images\wpfslider-21s.png" />
     <Content Include="SliderFiles\themes\2\js-image-slider.css" />
     <Content Include="SliderFiles\themes\2\js-image-slider.js" />
     <Content Include="SliderFiles\themes\2\loading.gif" />
