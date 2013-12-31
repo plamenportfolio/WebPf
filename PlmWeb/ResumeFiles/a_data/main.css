@@ -939,14 +939,14 @@ ul.tweet_list li {
 	}
 	
 .css {
-	width:45%; 
+	width:60%; 
 	-moz-animation:css 2s ease-out; 
 	-webkit-animation:css 2s ease-out; 
 	background:#3a7aa6;
 	}
 
 .js {
-	width:35%; 
+	width:65%; 
 	-moz-animation:js 2s ease-out; 
 	-webkit-animation:js 2s ease-out; 
 	background:#627076;
@@ -980,8 +980,8 @@ ul.tweet_list li {
 @-moz-keyframes aspnet { 0% { width:0px;} 100%{ width:30%;} }
 @-moz-keyframes sql { 0% { width:0px;} 100%{ width:40%;} }
 @-moz-keyframes html { 0% { width:0px;} 100%{ width:50%;} }
-@-moz-keyframes css { 0% { width:0px;} 100%{ width:45%;} }
-@-moz-keyframes js { 0% { width:0px;} 100%{ width:35%;} }
+@-moz-keyframes css { 0% { width:0px;} 100%{ width:60%;} }
+@-moz-keyframes js { 0% { width:0px;} 100%{ width:65%;} }
 @-moz-keyframes wordpress { 0% { width:0px;} 100%{ width:55%;} }
 @-moz-keyframes photoshop { 0% { width:0px;} 100%{ width:60%;}  }
 @-moz-keyframes autocad { 0% { width:0px;} 100%{ width:80%;}  }
@@ -993,8 +993,8 @@ ul.tweet_list li {
 @-webkit-keyframes aspnet { 0% { width:0px;} 100%{ width:30%;} }
 @-webkit-keyframes sql { 0% { width:0px;} 100%{ width:40%;} }
 @-webkit-keyframes html { 0% { width:0px;} 100%{ width:50%;} }
-@-webkit-keyframes css { 0% { width:0px;} 100%{ width:45%;} }
-@-webkit-keyframes js { 0% { width:0px;} 100%{ width:35%;} }
+@-webkit-keyframes css { 0% { width:0px;} 100%{ width:60%;} }
+@-webkit-keyframes js { 0% { width:0px;} 100%{ width:65%;} }
 @-webkit-keyframes wordpress { 0% { width:0px;} 100%{ width:55%;} }
 @-webkit-keyframes photoshop { 0% { width:0px;} 100%{ width:60%;}  }
 @-webkit-keyframes autocad { 0% { width:0px;} 100%{ width:80%;}  }
