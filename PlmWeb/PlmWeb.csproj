@@ -196,7 +196,6 @@
     <Content Include="SliderFiles\themes\2\slider.css" />
     <Content Include="SliderFiles\themes\2\thumbnail-slider.js" />
     <Content Include="SliderFiles\themes\generic.css" />
-    <Content Include="TestSecondPage.html" />
     <Content Include="PSSDataPageIntro\TweenMax.js" />
     <Content Include="ThreeDFrame\build\three.js" />
     <Content Include="ThreeDFrame\build\three.min.js" />
