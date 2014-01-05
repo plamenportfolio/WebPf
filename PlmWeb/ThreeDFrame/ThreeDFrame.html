@@ -80,8 +80,8 @@
 
 		        init();
 		        animate();
- 			    //changeEventsToSpiral();
-		    	//changeEventsToSphere();
+ 			    changeEventsToSpiral();
+		    	changeEventsToSphere();
 
 		        function init() {
 
@@ -235,7 +235,7 @@
 
 		            }, false);
 
-		            transform(targets.sphere, 2000);
+		            transform(targets.table, 6000);
 
 		            //
 
@@ -298,17 +298,17 @@
 
 		        }
 
-    		    //function changeEventsToSpiral() {
-		        //    setTimeout(function () {
-		        //        transform(targets.helix, 2000);
-		        //    }, 12000);
-		        //}
+    		    function changeEventsToSpiral() {
+		            setTimeout(function () {
+		                transform(targets.helix, 2000);
+		            }, 10000);
+		        }
 
-		        //function changeEventsToSphere() {
-		        //    setTimeout(function () {
-		        //        transform(targets.sphere, 2000);
-		        //    }, 50000);
-		        //}
+		        function changeEventsToSphere() {
+		            setTimeout(function () {
+		                transform(targets.sphere, 2000);
+		            }, 12000);
+		        }
 
 
 		</script>
