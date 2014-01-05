@@ -6,9 +6,9 @@
 		<title>three.js css3d - periodic table</title>
 		<link href="./styles/style.css" rel="stylesheet" />
 	</head>
-	<body>
-		<script src="./build/three.min.js"></script>
-        <script src="./build/Detector.js"></script>
+	<body >
+		<script src="./js/libs/three.min.js"></script>
+        <script src="js/libs/Detector.js"></script>
 		<script src="./js/libs/tween.min.js"></script>
 		<script src="./js/controls/TrackballControls.js"></script>
 		<script src="./js/renderers/CSS3DRenderer.js"></script>
@@ -24,280 +24,281 @@
 
 		<script>
 
-		    var table = [
-				"0011.jpg", "Health App", "WPF", 0, 1,
-				"0012.jpg", "Health App", "WPF", 2, 1,
-				"0013.jpg", "Health App", "WPF", 3, 1,
-				"0014.jpg", "Health App", "WPF", 4, 1,
-				"0015.jpg", "Health App", "WPF", 5, 1,
-				"0016.jpg", "Health App", "WPF", 6, 1,
-				"0017.jpg", "Health App", "WPF", 7, 1,
-				"0018.jpg", "Health App", "WPF", 8, 1,
-				"0021.jpg", "Read App", "WPF", 0, 2,
-				"0022.jpg", "Read App", "WPF", 2, 2,
-				"0023.jpg", "Read App", "WPF", 3, 2,
-				"0024.jpg", "Read App", "WPF", 4, 2,
-				"0025.jpg", "Read App", "WPF", 5, 2,
-				"0026.jpg", "Read App", "WPF", 6, 2,
-				"0027.jpg", "Read App", "WPF", 7, 2,
-				"0028.jpg", "Read App", "WPF", 8, 2,
-				"0029.jpg", "Read App", "WPF", 9, 2,
-				"0031.png", "Cloud App", "WPF", 0, 3,
-				"0032.png", "Cloud App", "WPF", 2, 3,
-				"0033.png", "Cloud App", "WPF", 3, 3,
-				"0034.png", "Cloud App", "WPF", 4, 3,
-				"0035.jpg", "Cloud App", "WPF", 5, 3,
-				"0036.jpg", "Cloud App", "WPF", 6, 3,
-				"0037.jpg", "Cloud App", "WPF", 7, 3,
-				"0038.jpg", "Cloud App", "WPF", 8, 3,
-				"0041.jpg", "Optmz App", "WIN8", 0, 4,
-				"0042.jpg", "Optmz App", "WIN8", 2, 4,
-				"0043.jpg", "Optmz App", "WIN8", 3, 4,
-				"0044.jpg", "Optmz App", "WIN8", 4, 4,
-				"0045.jpg", "Optmz App", "WIN8", 5, 4,
-				"0046.jpg", "Optmz App", "WIN8", 6, 4,
-				"0047.jpg", "Optmz App", "WIN8", 7, 4,
-				"0048.jpg", "Optmz App", "WIN8", 8, 4,
-				"0049.jpg", "Optmz App", "WIN8", 9, 4,
-				"0050.jpg", "Optmz App", "WPF", 10, 4,
-				"0051.png", "Snow App", "WPF", 0, 5,
-				"0052.png", "Snow App", "WPF", 2, 5,
-				"0053.png", "Snow App", "WPF", 3, 5,
-				"0054.png", "Snow App", "WPF", 4, 5,
-				"0055.png", "Snow App", "WPF", 5, 5,
-				"0056.png", "Snow App", "WPF", 6, 5,
-				"0057.png", "Snow App", "WPF", 7, 5,
-				"0061.png", "Calc App", "WPF", 9, 5,
-				"0062.png", "Calc App", "WPF", 10, 5
-		    ];
 
-		    var camera, scene, renderer;
-		    var controls;
+		        var table = [
+              "0011.jpg", "Health App", "WPF", 0, 1,
+              "0012.jpg", "Health App", "WPF", 2, 1,
+              "0013.jpg", "Health App", "WPF", 3, 1,
+              "0014.jpg", "Health App", "WPF", 4, 1,
+              "0015.jpg", "Health App", "WPF", 5, 1,
+              "0016.jpg", "Health App", "WPF", 6, 1,
+              "0017.jpg", "Health App", "WPF", 7, 1,
+              "0018.jpg", "Health App", "WPF", 8, 1,
+              "0021.jpg", "Read App", "WPF", 0, 2,
+              "0022.jpg", "Read App", "WPF", 2, 2,
+              "0023.jpg", "Read App", "WPF", 3, 2,
+              "0024.jpg", "Read App", "WPF", 4, 2,
+              "0025.jpg", "Read App", "WPF", 5, 2,
+              "0026.jpg", "Read App", "WPF", 6, 2,
+              "0027.jpg", "Read App", "WPF", 7, 2,
+              "0028.jpg", "Read App", "WPF", 8, 2,
+              "0029.jpg", "Read App", "WPF", 9, 2,
+              "0031.png", "Cloud App", "WPF", 0, 3,
+              "0032.png", "Cloud App", "WPF", 2, 3,
+              "0033.png", "Cloud App", "WPF", 3, 3,
+              "0034.png", "Cloud App", "WPF", 4, 3,
+              "0035.jpg", "Cloud App", "WPF", 5, 3,
+              "0036.jpg", "Cloud App", "WPF", 6, 3,
+              "0037.jpg", "Cloud App", "WPF", 7, 3,
+              "0038.jpg", "Cloud App", "WPF", 8, 3,
+              "0041.jpg", "Optmz App", "WIN8", 0, 4,
+              "0042.jpg", "Optmz App", "WIN8", 2, 4,
+              "0043.jpg", "Optmz App", "WIN8", 3, 4,
+              "0044.jpg", "Optmz App", "WIN8", 4, 4,
+              "0045.jpg", "Optmz App", "WIN8", 5, 4,
+              "0046.jpg", "Optmz App", "WIN8", 6, 4,
+              "0047.jpg", "Optmz App", "WIN8", 7, 4,
+              "0048.jpg", "Optmz App", "WIN8", 8, 4,
+              "0049.jpg", "Optmz App", "WIN8", 9, 4,
+              "0050.jpg", "Optmz App", "WPF", 10, 4,
+              "0051.png", "Snow App", "WPF", 0, 5,
+              "0052.png", "Snow App", "WPF", 2, 5,
+              "0053.png", "Snow App", "WPF", 3, 5,
+              "0054.png", "Snow App", "WPF", 4, 5,
+              "0055.png", "Snow App", "WPF", 5, 5,
+              "0056.png", "Snow App", "WPF", 6, 5,
+              "0057.png", "Snow App", "WPF", 7, 5,
+              "0061.png", "Calc App", "WPF", 9, 5,
+              "0062.png", "Calc App", "WPF", 10, 5
+		        ];
 
-		    var objects = [];
-		    var targets = { table: [], sphere: [], helix: [], grid: [] };
+		        var camera, scene, renderer;
+		        var controls;
 
-		    init();
-		    animate();
-		    changeEventsToSpiral();
-		    changeEventsToSphere();
+		        var objects = [];
+		        var targets = { table: [], sphere: [], helix: [], grid: [] };
 
-		    function init() {
+		        init();
+		        animate();
+ 			changeEventsToSpiral();
+		    	changeEventsToSphere();
 
-		        camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 10000);
-		        camera.position.z = 3000;
+		        function init() {
 
-		        scene = new THREE.Scene();
+		            camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 10000);
+		            camera.position.z = 3000;
 
-		        // table
-		        //<img src="./SliderFiles/images/netslider-01s.jpg" />
-		        for (var i = 0; i < table.length; i += 5) {
+		            scene = new THREE.Scene();
 
-		            var element = document.createElement('div');
-		            element.className = 'element';
-		            element.style.backgroundColor = 'rgba(0,127,127,' + (Math.random() * 0.5 + 0.25) + ')';
+		            // table
+		            //<img src="./SliderFiles/images/netslider-01s.jpg" />
+		            for (var i = 0; i < table.length; i += 5) {
 
-		            var number = document.createElement('div');
-		            number.className = 'number';
-		            number.textContent = i + 1;
-		            element.appendChild(number);
+		                var element = document.createElement('div');
+		                element.className = 'element';
+		                element.style.backgroundColor = 'rgba(0,127,127,' + (Math.random() * 0.5 + 0.25) + ')';
 
-		            var symbol = document.createElement('div');
-		            symbol.className = 'symbol';
-		            symbol.innerHTML = "<img src='./images/" + table[i] + "' />";
-		            element.appendChild(symbol);
+		                var number = document.createElement('div');
+		                number.className = 'number';
+		                number.textContent = i + 1;
+		                element.appendChild(number);
 
-		            var details = document.createElement('div');
-		            details.className = 'details';
-		            details.innerHTML = table[i + 1] + '<br>' + table[i + 2];
-		            element.appendChild(details);
+		                var symbol = document.createElement('div');
+		                symbol.className = 'symbol';
+		                symbol.innerHTML = "<img src='./images/" + table[i] + "' />";
+		                element.appendChild(symbol);
 
-		            var object = new THREE.CSS3DObject(element);
-		            object.position.x = Math.random() * 6000 - 3000;
-		            object.position.y = Math.random() * 6000 - 3000;
-		            object.position.z = Math.random() * 6000 - 3000;
-		            scene.add(object);
+		                var details = document.createElement('div');
+		                details.className = 'details';
+		                details.innerHTML = table[i + 1] + '<br>' + table[i + 2];
+		                element.appendChild(details);
 
-		            objects.push(object);
+		                var object = new THREE.CSS3DObject(element);
+		                object.position.x = Math.random() * 6000 - 3000;
+		                object.position.y = Math.random() * 6000 - 3000;
+		                object.position.z = Math.random() * 6000 - 3000;
+		                scene.add(object);
+
+		                objects.push(object);
+
+		                //
+
+		                var object = new THREE.Object3D();
+		                object.position.x = (table[i + 3] * 290) - 1330;
+		                object.position.y = -(table[i + 4] * 330) + 990;
+
+		                targets.table.push(object);
+
+		            }
+
+		            // sphere
+
+		            var vector = new THREE.Vector3();
+
+		            for (var i = 0, l = objects.length; i < l; i++) {
+
+		                var phi = Math.acos(-1 + (2 * i) / l);
+		                var theta = Math.sqrt(l * Math.PI) * phi;
+
+		                var object = new THREE.Object3D();
+
+		                object.position.x = 800 * Math.cos(theta) * Math.sin(phi);
+		                object.position.y = 800 * Math.sin(theta) * Math.sin(phi);
+		                object.position.z = 800 * Math.cos(phi);
+
+		                vector.copy(object.position).multiplyScalar(2);
+
+		                object.lookAt(vector);
+
+		                targets.sphere.push(object);
+
+		            }
+
+		            // helix
+
+		            var vector = new THREE.Vector3();
+
+		            for (var i = 0, l = objects.length; i < l; i++) {
+
+		                var phi = i * 0.175 + Math.PI;
+
+		                var object = new THREE.Object3D();
+
+		                object.position.x = 1800 * Math.sin(phi);
+		                object.position.y = -(i * 15) + 450;
+		                object.position.z = 1800 * Math.cos(phi);
+
+		                vector.x = object.position.x * 2;
+		                vector.y = object.position.y;
+		                vector.z = object.position.z * 2;
+
+		                object.lookAt(vector);
+
+		                targets.helix.push(object);
+
+		            }
+
+		            // grid
+
+		            for (var i = 0; i < objects.length; i++) {
+
+		                var object = new THREE.Object3D();
+
+		                object.position.x = ((i % 5) * 400) - 800;
+		                object.position.y = (-(Math.floor(i / 5) % 5) * 400) + 800;
+		                object.position.z = (Math.floor(i / 25)) * 1000 - 2000;
+
+		                targets.grid.push(object);
+
+		            }
 
 		            //
 
-		            var object = new THREE.Object3D();
-		            object.position.x = (table[i + 3] * 290) - 1330;
-		            object.position.y = -(table[i + 4] * 330) + 990;
+		            renderer = new THREE.CSS3DRenderer();
+		            renderer.setSize(window.innerWidth, window.innerHeight);
+		            renderer.domElement.style.position = 'absolute';
+		            document.getElementById('container').appendChild(renderer.domElement);
 
-		            targets.table.push(object);
+		            //
 
-		        }
+		            controls = new THREE.TrackballControls(camera, renderer.domElement);
+		            controls.rotateSpeed = 0.5;
+		            controls.minDistance = 500;
+		            controls.maxDistance = 6000;
+		            controls.addEventListener('change', render);
 
-		        // sphere
+		            var button = document.getElementById('table');
+		            button.addEventListener('click', function (event) {
 
-		        var vector = new THREE.Vector3();
+		                transform(targets.table, 2000);
 
-		        for (var i = 0, l = objects.length; i < l; i++) {
+		            }, false);
 
-		            var phi = Math.acos(-1 + (2 * i) / l);
-		            var theta = Math.sqrt(l * Math.PI) * phi;
+		            var button = document.getElementById('sphere');
+		            button.addEventListener('click', function (event) {
 
-		            var object = new THREE.Object3D();
+		                transform(targets.sphere, 2000);
 
-		            object.position.x = 800 * Math.cos(theta) * Math.sin(phi);
-		            object.position.y = 800 * Math.sin(theta) * Math.sin(phi);
-		            object.position.z = 800 * Math.cos(phi);
+		            }, false);
 
-		            vector.copy(object.position).multiplyScalar(2);
+		            var button = document.getElementById('helix');
+		            button.addEventListener('click', function (event) {
 
-		            object.lookAt(vector);
+		                transform(targets.helix, 2000);
 
-		            targets.sphere.push(object);
+		            }, false);
 
-		        }
+		            var button = document.getElementById('grid');
+		            button.addEventListener('click', function (event) {
 
-		        // helix
+		                transform(targets.grid, 2000);
 
-		        var vector = new THREE.Vector3();
-
-		        for (var i = 0, l = objects.length; i < l; i++) {
-
-		            var phi = i * 0.175 + Math.PI;
-
-		            var object = new THREE.Object3D();
-
-		            object.position.x = 1800 * Math.sin(phi);
-		            object.position.y = -(i * 15) + 450;
-		            object.position.z = 1800 * Math.cos(phi);
-
-		            vector.x = object.position.x * 2;
-		            vector.y = object.position.y;
-		            vector.z = object.position.z * 2;
-
-		            object.lookAt(vector);
-
-		            targets.helix.push(object);
-
-		        }
-
-		        // grid
-
-		        for (var i = 0; i < objects.length; i++) {
-
-		            var object = new THREE.Object3D();
-
-		            object.position.x = ((i % 5) * 400) - 800;
-		            object.position.y = (-(Math.floor(i / 5) % 5) * 400) + 800;
-		            object.position.z = (Math.floor(i / 25)) * 1000 - 2000;
-
-		            targets.grid.push(object);
-
-		        }
-
-		        //
-
-		        renderer = new THREE.CSS3DRenderer();
-		        renderer.setSize(window.innerWidth, window.innerHeight);
-		        renderer.domElement.style.position = 'absolute';
-		        document.getElementById('container').appendChild(renderer.domElement);
-
-		        //
-
-		        controls = new THREE.TrackballControls(camera, renderer.domElement);
-		        controls.rotateSpeed = 0.5;
-		        controls.minDistance = 500;
-		        controls.maxDistance = 6000;
-		        controls.addEventListener('change', render);
-
-		        var button = document.getElementById('table');
-		        button.addEventListener('click', function (event) {
-
-		            transform(targets.table, 2000);
-
-		        }, false);
-
-		        var button = document.getElementById('sphere');
-		        button.addEventListener('click', function (event) {
+		            }, false);
 
 		            transform(targets.sphere, 2000);
 
-		        }, false);
+		            //
 
-		        var button = document.getElementById('helix');
-		        button.addEventListener('click', function (event) {
-
-		            transform(targets.helix, 2000);
-
-		        }, false);
-
-		        var button = document.getElementById('grid');
-		        button.addEventListener('click', function (event) {
-
-		            transform(targets.grid, 2000);
-
-		        }, false);
-
-		        transform(targets.table, 5000);
-
-		        //
-
-		        window.addEventListener('resize', onWindowResize, false);
-
-		    }
-
-		    function transform(targets, duration) {
-
-		        TWEEN.removeAll();
-
-		        for (var i = 0; i < objects.length; i++) {
-
-		            var object = objects[i];
-		            var target = targets[i];
-
-		            new TWEEN.Tween(object.position)
-						.to({ x: target.position.x, y: target.position.y, z: target.position.z }, Math.random() * duration + duration)
-						.easing(TWEEN.Easing.Exponential.InOut)
-						.start();
-
-		            new TWEEN.Tween(object.rotation)
-						.to({ x: target.rotation.x, y: target.rotation.y, z: target.rotation.z }, Math.random() * duration + duration)
-						.easing(TWEEN.Easing.Exponential.InOut)
-						.start();
+		            window.addEventListener('resize', onWindowResize, false);
 
 		        }
 
-		        new TWEEN.Tween(this)
-					.to({}, duration * 2)
-					.onUpdate(render)
-					.start();
+		        function transform(targets, duration) {
 
-		    }
+		            TWEEN.removeAll();
 
-		    function onWindowResize() {
+		            for (var i = 0; i < objects.length; i++) {
 
-		        camera.aspect = window.innerWidth / window.innerHeight;
-		        camera.updateProjectionMatrix();
+		                var object = objects[i];
+		                var target = targets[i];
 
-		        renderer.setSize(window.innerWidth, window.innerHeight);
+		                new TWEEN.Tween(object.position)
+                            .to({ x: target.position.x, y: target.position.y, z: target.position.z }, Math.random() * duration + duration)
+                            .easing(TWEEN.Easing.Exponential.InOut)
+                            .start();
 
-		        render();
+		                new TWEEN.Tween(object.rotation)
+                            .to({ x: target.rotation.x, y: target.rotation.y, z: target.rotation.z }, Math.random() * duration + duration)
+                            .easing(TWEEN.Easing.Exponential.InOut)
+                            .start();
 
-		    }
+		            }
 
-		    function animate() {
+		            new TWEEN.Tween(this)
+                        .to({}, duration * 2)
+                        .onUpdate(render)
+                        .start();
 
-		        requestAnimationFrame(animate);
+		        }
 
-		        TWEEN.update();
+		        function onWindowResize() {
 
-		        controls.update();
+		            camera.aspect = window.innerWidth / window.innerHeight;
+		            camera.updateProjectionMatrix();
 
-		    }
+		            renderer.setSize(window.innerWidth, window.innerHeight);
 
-		    function render() {
+		            render();
 
-		        renderer.render(scene, camera);
+		        }
 
-		    }
+		        function animate() {
 
-		    function changeEventsToSpiral() {
+		            requestAnimationFrame(animate);
+
+		            TWEEN.update();
+
+		            controls.update();
+
+		        }
+
+		        function render() {
+
+		            renderer.render(scene, camera);
+
+		        }
+
+    		    function changeEventsToSpiral() {
 		        setTimeout(function () {
 		            transform(targets.helix, 2000);
 		        }, 12000);
@@ -308,6 +309,7 @@
 		            transform(targets.sphere, 2000);
 		        }, 16000);
 		    }
+
 
 		</script>
 	</body>
