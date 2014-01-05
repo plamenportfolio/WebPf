@@ -197,6 +197,8 @@
     <Content Include="SliderFiles\themes\2\thumbnail-slider.js" />
     <Content Include="SliderFiles\themes\generic.css" />
     <Content Include="PSSDataPageIntro\TweenMax.js" />
+    <Content Include="ThreeDFrame\js\libs\Detector.js" />
+    <Content Include="ThreeDFrame\js\libs\OrbitControls.js" />
     <Content Include="ThreeDFrame\js\libs\three.js" />
     <Content Include="ThreeDFrame\js\libs\three.min.js" />
     <Content Include="ThreeDFrame\images\0011.jpg" />
@@ -255,6 +257,9 @@
     <Content Include="ThreeDFrame\js\libs\dat.gui.min.js" />
     <Content Include="ThreeDFrame\js\libs\stats.min.js" />
     <Content Include="ThreeDFrame\js\libs\system.min.js" />
+    <Content Include="ThreeDFrame\js\libs\THREEx.FullScreen.js" />
+    <Content Include="ThreeDFrame\js\libs\THREEx.KeyboardState.js" />
+    <Content Include="ThreeDFrame\js\libs\THREEx.WindowResize.js" />
     <Content Include="ThreeDFrame\js\libs\tween.min.js" />
     <Content Include="ThreeDFrame\js\renderers\CSS2DRenderer.js" />
     <Content Include="ThreeDFrame\js\renderers\CSS3DRenderer.js" />
