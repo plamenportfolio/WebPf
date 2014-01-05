@@ -197,8 +197,8 @@
     <Content Include="SliderFiles\themes\2\thumbnail-slider.js" />
     <Content Include="SliderFiles\themes\generic.css" />
     <Content Include="PSSDataPageIntro\TweenMax.js" />
-    <Content Include="ThreeDFrame\build\three.js" />
-    <Content Include="ThreeDFrame\build\three.min.js" />
+    <Content Include="ThreeDFrame\js\libs\three.js" />
+    <Content Include="ThreeDFrame\js\libs\three.min.js" />
     <Content Include="ThreeDFrame\images\0011.jpg" />
     <Content Include="ThreeDFrame\images\0012.jpg" />
     <Content Include="ThreeDFrame\images\0013.jpg" />
@@ -284,7 +284,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ThreeDFrame\build\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
